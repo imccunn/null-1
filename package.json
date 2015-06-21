@@ -1,0 +1,45 @@
+{
+  "name": "null-1",
+  "version": "0.1.0",
+  "description": "A neat game.",
+  "main": "server.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "gulp test",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/imccunn/null-1.git"
+  },
+  "author": "Ian McCunn <ianmccunn@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/imccunn/null-1/issues"
+  },
+  "homepage": "https://github.com/imccunn/null-1",
+  "dependencies": {
+    "body-parser": "^1.13.1",
+    "express": "^4.12.4",
+    "mongoose": "^4.0.5"
+  },
+  "devDependencies": {
+    "angular": "^1.4.1",
+    "angular-mocks": "^1.4.1",
+    "angular-route": "^1.4.1",
+    "gulp": "^3.9.0",
+    "gulp-if": "^1.2.5",
+    "gulp-jscs": "^1.6.0",
+    "gulp-jshint": "^1.11.0",
+    "gulp-load-plugins": "^1.0.0-rc.1",
+    "gulp-print": "^1.1.0",
+    "gulp-uglify": "^1.2.0",
+    "gulp-util": "^3.0.5",
+    "gulp-webpack": "^1.5.0",
+    "jshint-stylish": "^2.0.1",
+    "node-libs-browser": "^0.5.2",
+    "webpack": "^1.9.11"
+  }
+}
