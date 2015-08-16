@@ -32,7 +32,6 @@ var nx = Math.floor(c.width/20);
 var ny = Math.floor(c.width/20);
 var xPos = 0;
 
-
 function drawGrid(){
   for (var i = 0; i < nx; i++) {
     xPos += 20;
