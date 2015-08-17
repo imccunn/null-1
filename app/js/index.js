@@ -17,12 +17,12 @@ cont.appendChild(pc);
 
 var c = document.getElementById('c');
 var ctx = c.getContext('2d');
-c.width = 800;
+c.width = window.innerWidth;
 c.height = 800;
 
 var p = document.getElementById('playerLayer');
 var pCtx = p.getContext('2d');
-p.width = 800;
+p.width = c.width;
 p.height = 800;
 
 ctx.fillStyle = '#000000';
@@ -162,3 +162,4 @@ function frame() {
 }
 
 frame();
+
