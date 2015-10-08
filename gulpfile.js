@@ -20,12 +20,14 @@ gulp.task('css', function() {
              .pipe(gulp.dest('./build/css'));
 });
 
+gulp.task('phaser', function() {
+	return gulp.src('./node_modules/phaser/build/phaser.min.js')
+		.pipe(gulp.dest('./build/js/'));
+})
+
 gulp.task('watch', function() {
   gulp.watch('./app/**/*.*', ['build']);
 })
 
-gulp.task('build', ['js', 'html', 'css']);
-
-
-
+gulp.task('build', ['js', 'phaser', 'html', 'css']);
 
