@@ -2,7 +2,9 @@
 'use strict';
 
 function Terrain(detail) {
+
 	this.size = Math.pow(2, detail) + 1;
+	console.log(Math.pow(this.size, 2));
 	this.max = this.size - 1;
 	this.map = new Float32Array(this.size * this.size);
 }
@@ -38,6 +40,7 @@ Terrain.prototype.generate = function(roughness) {
 	    }
 	  }
 	  divide(size / 2);
+	  
 	}
 	function average(values) {
 	  var valid = values.filter(function(val) { return val !== -1; });
@@ -62,6 +65,7 @@ Terrain.prototype.generate = function(roughness) {
 	  ]);
 	  self.set(x, y, ave + offset);
 	}
+
 };
 
 Terrain.prototype.draw = function(ctx, width, height) {
@@ -75,7 +79,7 @@ Terrain.prototype.draw = function(ctx, width, height) {
 	    var water = project(x, y, waterVal);
 	    var style = brightness(x, y, this.get(x + 1, y) - val);
 	    rect(top, bottom, style);
-	    rect(water, bottom, 'rgba(50, 150, 200, 0.15)');
+	    //rect(water, bottom, 'rgba(50, 150, 200, 0.15)');
 	  }
 	}
 	function rect(a, b, style) {
@@ -97,7 +101,7 @@ Terrain.prototype.draw = function(ctx, width, height) {
 	function project(flatX, flatY, flatZ) {
 	  var point = iso(flatX, flatY);
 	  var x0 = width * 0.5;
-	  var y0 = height * 0.2;
+	  var y0 = height * 0.5;
 	  var z = self.size * 0.5 - flatZ + point.y * 0.75;
 	  var x = (point.x - self.size * 0.5) * 6;
 	  var y = (self.size - point.y) * 0.005 + 1;
